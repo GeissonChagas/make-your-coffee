@@ -1,21 +1,9 @@
-# 
+#Make-your-coffe
 
-> 
+## Objetivos:
 
-## Build Setup
+  - Criar um app em vue.js para uma cafeteria. Esse projeto será dividido em basicamente 2 etapas, a primeira seria a escolha do tipo de café de acordo com um cardápio a ser criado e um menu de "adicionais" ao café, e a segunda seria para o proprietário da cafeteria ter acesso ao que foi pedido pelo cliente, cancelamento de pedido e aviso de pedido concluído.
+  - Ao longo do desenvolvimento, focarei na evolução do projeto seguido de boas práticas de programação, investindo todo tempo e atenção para entender um pouco mais do funcionamento da ferramenta vue.js;
+  
+Prints: 
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

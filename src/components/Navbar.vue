@@ -41,6 +41,6 @@ export default {
     transition: .5s;
   }
   #nav a:hover {
-    color: #FFF;
+    color: #DAA520;;
   }
 </style>

@@ -1,0 +1,83 @@
+{
+  "ingredientes": {
+    "tipo": [
+      {
+        "id": 1,
+        "tipo": "100% arábica"
+      },
+      {
+        "id": 2,
+        "tipo": "Conilon"
+      },
+      {
+        "id": 3,
+        "tipo": "Blend tradicional"
+      },
+      {
+        "id": 4,
+        "tipo": "Descafeinado"
+      }
+    ],
+    "Origem": [
+      {
+        "id": 1,
+        "tipo": "Sul de minas"
+      },
+      {
+        "id": 2,
+        "tipo": "Mogiana paulista"
+      },
+      {
+        "id": 3,
+        "tipo": "Montanhas de Espítiro Santo"
+      },
+      {
+        "id": 4,
+        "tipo": "Cerrado Mineiro"
+      }
+    ],
+    "opcionais": [
+      {
+        "id": 1,
+        "tipo": "Chocolate ao leite"
+      },
+      {
+        "id": 2,
+        "tipo": "Chocolate branco"
+      },
+      {
+        "id": 3,
+        "tipo": "Canela"
+      },
+      {
+        "id": 4,
+        "tipo": "Açúcar"
+      },
+      {
+        "id": 5,
+        "tipo": "Chantilly"
+      },
+      {
+        "id": 6,
+        "tipo": "Cream"
+      }
+    ]
+  },
+  "status": [
+    {
+      "id": 1,
+      "tipo": "Solicitado"
+    },
+    {
+      "id": 2,
+      "tipo": "Em produção"
+    },
+    {
+      "id": 3,
+      "tipo": "Finalizado"
+    }
+  ],
+  "Coffes": [
+
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "ingredientes": {
-    "tipo": [
+    "tipocafes": [
       {
         "id": 1,
         "tipo": "100% arábica"
@@ -18,7 +18,7 @@
         "tipo": "Descafeinado"
       }
     ],
-    "Origem": [
+    "origens": [
       {
         "id": 1,
         "tipo": "Sul de minas"
@@ -77,7 +77,7 @@
       "tipo": "Finalizado"
     }
   ],
-  "Coffes": [
+  "coffees": [
 
   ]
 }

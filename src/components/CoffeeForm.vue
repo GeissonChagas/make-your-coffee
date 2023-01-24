@@ -2,30 +2,30 @@
     <div>
         <p>Componente de mensagem</p>
         <div>
-            <form id="coffee-form">
+            <form id="coffee-form" @submit="createCoffee">
                 <div class="input-container">
                     <label for="name">Nome e sobrenome:</label>
                     <input type="text" id="name" name="name" v-model="name" placeholder="Digite seu nome e sobrenome.">
                 </div>
                 <div class="input-container">
-                    <label for="name">Escolha o tipo de café:</label>
-                    <select id="tipo-cafe" name="tipo-cafe" v-model="tipo">
-                        <option value="">Selecione o seu café:</option>
-                        <option value="100%-arábica">100% arábica</option>
+                  <label for="tipocafe">Escolha o tipo de café:</label>
+                    <select name="tipocafe" id="tipocafe" v-model="tipocafe">
+                      <option value="">Selecione o tipo de café</option>
+                      <option v-for="tipocafe in tipocafes" :key="tipocafe.id" :value="tipocafe.tipo">{{ tipocafe.tipo }}</option>
                     </select>
                 </div>
                 <div class="input-container">
-                    <label for="origem">Escolha a origem do café:</label>
+                    <label for="origem">Escolha a origem do café</label>
                     <select id="origem-cafe" name="origem-cafe" v-model="origem">
-                        <option value="">Selecione a origem do seu café:</option>
-                        <option value="Sul de minas">Sul de minas</option>
+                        <option value="">Selecione a origem do seu café</option>
+                        <option v-for="origem in origens" :key="origem.id" :value="origem.tipo">{{ origem.tipo }}</option>
                     </select>
                 </div>
                 <div class="input-container">
                     <label for="origem">Selecione os opcionais:</label>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="opcionais" v-model="opcionais" value="chocolate">
-                        <span>Chocolate ao leite</span>
+                    <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
+                        <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
+                          <span>{{ opcional.tipo }}</span>
                     </div>
                 </div>
                 <div class="input-container">
@@ -38,8 +38,38 @@
 
 <script>
     export default {
-        name: "CoffeeForm"
-    }
+        name: "CoffeeForm",
+        data () {
+          return{
+            tipocafe: null,
+            origem: null,
+            opcionaisdata: null,
+            nome: null,
+            tipocafes: null,
+            opcionais: [],
+            status: "Solicitado",
+            msg: null,
+          }
+        },
+        methods: {
+          async getIngredientes(){
+            const req = await fetch('http://localhost:3000/ingredientes');
+            const data = await req.json();
+
+            this.tipocafes = data.tipocafes;
+            this.origens = data.origens;
+            this.opcionaisdata = data.opcionais;
+            
+          }
+        },
+        mounted () {
+          this.getIngredientes();
+        }
+    } 
+
+    
+
+
 </script>
 
 <style scoped>

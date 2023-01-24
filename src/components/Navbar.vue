@@ -35,7 +35,7 @@ export default {
     height: 50px;
   }
   #nav a {
-    color: #b4764f  ;
+    color: #b4764f;
     text-decoration: none;
     margin: 12px;
     transition: .5s;

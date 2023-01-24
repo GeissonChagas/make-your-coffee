@@ -60,7 +60,29 @@
             this.origens = data.origens;
             this.opcionaisdata = data.opcionais;
             
+          },
+        
+          async createCoffee (e){
+            e.preventDefault();
+            const data = {
+              nome: this.nome,
+              tipocafe: this.tipocafe,
+              origem: this.origem,
+              opcionais: Array.from(this.opcionais),
+              status: "Solicitado"
+            }
+            const dataJson = JSON.stringify(data);
+
+            const req = await fetch ('http://localhost:3000/coffees', {
+              method: "POST",
+              headers: {"Content-Type": "application/json"},
+              body: dataJson
+            });
+
+            const res = await req.json();
+            console.log(res)
           }
+
         },
         mounted () {
           this.getIngredientes();

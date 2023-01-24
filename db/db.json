@@ -78,6 +78,16 @@
     }
   ],
   "coffees": [
-
+    {
+      "nome": null,
+      "tipocafe": "100% arábica",
+      "origem": "Sul de minas",
+      "opcionais": [
+        "Chocolate ao leite",
+        "Chantilly"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    }
   ]
 }

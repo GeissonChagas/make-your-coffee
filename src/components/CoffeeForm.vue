@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Componente de mensagem</p>
+        <Message :msg="msg" v-show="msg" />
         <div>
             <form id="coffee-form" @submit="createCoffee">
                 <div class="input-container">
@@ -37,6 +37,9 @@
 </template>
 
 <script>
+
+  import Message from './Message.vue';
+
     export default {
         name: "CoffeeForm",
         data () {
@@ -80,12 +83,25 @@
             });
 
             const res = await req.json();
-            console.log(res)
+            
+            // colocar msg de sistema:
+              this.msg = `Pedido  n° ${res.id} realizado com sucesso!`
+            //limpar msg:
+              setTimeout(() => this.msg="", 5000);
+            //limpar os campos:
+            this.nome = "";
+            this.tipocafe = "";
+            this.origem = "";
+            this.opcionais = "";
+
           }
 
         },
         mounted () {
           this.getIngredientes();
+        },
+        components:{
+          Message
         }
     } 
 

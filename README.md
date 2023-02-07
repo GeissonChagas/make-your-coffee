@@ -1,6 +1,6 @@
 # Make your coffee
 ## Descrição:
-  - Este é um projeto de front-end que apresenta uma interface para solicitar pedidos de uma cafeteria. Quando o formulário é enviado, os dados são armazenados em uma API simulada criada com o json-server e exibidos na aba de pedidos. Na aba de pedidos, é possível selecionar o status do pedido e até mesmo cancelá-lo (excluir).
+  Este é um projeto de front-end que apresenta uma interface para solicitar pedidos de uma cafeteria. Quando o formulário é enviado, os dados são armazenados em uma API simulada criada com o json-server e exibidos na aba de pedidos. Na aba de pedidos, é possível selecionar o status do pedido e até mesmo cancelá-lo (excluir).
 
 ## Objetivos:
 Este projeto tem como objetivo aprimorar seus conhecimentos em:
